@@ -71,24 +71,110 @@
 
 //Find the largest prime of 600851475143?
 
-let number = 600851475143;
-let factor = 2;
-let largestPrimeFactor = 0;
+// let number = 600851475143;
+// let factor = 2;
+// let largestPrimeFactor = 0;
 
-while (factor * factor <= number) {
+// while (factor * factor <= number) {
 
-    if (number % factor === 0) {
-        largestPrimeFactor = factor;
-        number = number / factor;
+//     if (number % factor === 0) {
+//         largestPrimeFactor = factor;
+//         number = number / factor;
 
-    } else {
-        factor++;
+//     } else {
+//         factor++;
+//     }
+// }
+
+// if (number > largestPrimeFactor) {
+//     largestPrimeFactor = number;
+// }
+
+// console.log(largestPrimeFactor);
+
+
+
+
+//Find the largest palindrome of 3 digit.
+
+// let largestPali = 0;
+
+// for (let i = 100; i <= 999; i++) {
+
+//     for (let j = 100; j <= 999; j++) {
+
+//         let product = i * j;
+//         let strProduct = String(product);
+//         let reversed = strProduct.split("").reverse().join("");
+
+//         if (strProduct === reversed) {
+
+//             if (product > largestPali) {
+//                 largestPali = product;
+//             }
+//         }
+//     }
+// }
+
+// console.log(largestPali);
+
+
+// let janak = [1,2,3,4,5];
+
+// let kanaj = janak.reverse();
+
+// console.log(kanaj);
+
+
+
+
+
+
+
+
+// let sqrLmit = 686000n;
+// let oddSq =  [];
+// let itrator = 0;
+
+// while(itrator <= sqrLmit){
+
+//     if((itrator%2) !== 0){
+//         oddSq.push(itrator * itrator);
+//     }
+
+
+//     itrator++
+// }
+
+
+// let rotate = 0;
+// let sum = 0n;
+
+// while(rotate<oddSq.length){
+//     sum = sum + BigInt(oddSq[rotate]);
+
+//     rotate++
+// }
+
+// console.log(sum);
+
+
+
+
+
+let i = 1n;
+let sum = 0n;
+let mult = [];
+
+while(i<=1000){
+    if((i%BigInt(3) == 0) || (i%BigInt(5) == 0)){
+        sum = sum + i;
+        mult.push(i)
     }
+
+i++
 }
 
-if (number > largestPrimeFactor) {
-    largestPrimeFactor = number;
-}
-
-console.log(largestPrimeFactor);
+console.log(sum);
+console.log(mult);
 
